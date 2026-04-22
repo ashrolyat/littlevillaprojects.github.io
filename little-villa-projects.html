@@ -1,0 +1,1067 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Little Villa Projects — Interior Design Dubai</title>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Jost:wght@300;400;500&display=swap" rel="stylesheet" />
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  :root {
+    --cream: #FAF8F4;
+    --warm-white: #F5F2ED;
+    --stone: #E8E3DA;
+    --stone-mid: #D4CCC0;
+    --stone-dark: #B8AFA0;
+    --sage: #8A9E88;
+    --sage-light: #C5D4C3;
+    --sage-dark: #5E7A5C;
+    --text-dark: #2C2824;
+    --text-mid: #6B6259;
+    --text-light: #9E9087;
+    --serif: 'Cormorant Garamond', Georgia, serif;
+    --sans: 'Jost', sans-serif;
+  }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    font-family: var(--sans);
+    background: var(--cream);
+    color: var(--text-dark);
+    font-weight: 300;
+    overflow-x: hidden;
+  }
+
+  /* ── NAV ── */
+  nav {
+    position: fixed;
+    top: 0; left: 0; right: 0;
+    z-index: 100;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 4rem;
+    height: 72px;
+    background: rgba(250, 248, 244, 0.95);
+    backdrop-filter: blur(8px);
+    border-bottom: 1px solid var(--stone);
+  }
+
+  .nav-logo {
+    font-family: var(--serif);
+    font-size: 1.15rem;
+    font-weight: 400;
+    letter-spacing: 0.12em;
+    color: var(--text-dark);
+    text-decoration: none;
+    text-transform: uppercase;
+  }
+
+  .nav-links {
+    display: flex;
+    gap: 2.5rem;
+    list-style: none;
+  }
+
+  .nav-links a {
+    font-family: var(--sans);
+    font-size: 0.75rem;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--text-mid);
+    text-decoration: none;
+    transition: color 0.3s;
+  }
+
+  .nav-links a:hover { color: var(--sage-dark); }
+
+  .nav-cta {
+    font-family: var(--sans);
+    font-size: 0.72rem;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--cream);
+    background: var(--sage);
+    text-decoration: none;
+    padding: 0.6rem 1.4rem;
+    border-radius: 2px;
+    transition: background 0.3s;
+  }
+
+  .nav-cta:hover { background: var(--sage-dark); }
+
+  /* ── HERO ── */
+  #home {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 8rem 2rem 4rem;
+    position: relative;
+    background: var(--cream);
+  }
+
+  .hero-eyebrow {
+    font-family: var(--sans);
+    font-size: 0.7rem;
+    letter-spacing: 0.3em;
+    text-transform: uppercase;
+    color: var(--sage);
+    margin-bottom: 1.8rem;
+  }
+
+  .hero-title {
+    font-family: var(--serif);
+    font-size: clamp(3.5rem, 8vw, 7rem);
+    font-weight: 300;
+    line-height: 1.05;
+    color: var(--text-dark);
+    letter-spacing: 0.02em;
+    margin-bottom: 1.5rem;
+  }
+
+  .hero-title em {
+    font-style: italic;
+    color: var(--sage-dark);
+  }
+
+  .hero-sub {
+    font-family: var(--sans);
+    font-size: 0.85rem;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--text-light);
+    margin-bottom: 3rem;
+  }
+
+  .hero-tagline {
+    font-family: var(--serif);
+    font-size: 1.2rem;
+    font-style: italic;
+    color: var(--text-mid);
+    max-width: 420px;
+    line-height: 1.7;
+    margin-bottom: 3.5rem;
+  }
+
+  .hero-actions {
+    display: flex;
+    gap: 1.5rem;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .btn-primary {
+    font-family: var(--sans);
+    font-size: 0.72rem;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--cream);
+    background: var(--text-dark);
+    text-decoration: none;
+    padding: 0.9rem 2.2rem;
+    border-radius: 2px;
+    transition: background 0.3s;
+  }
+
+  .btn-primary:hover { background: var(--sage-dark); }
+
+  .btn-outline {
+    font-family: var(--sans);
+    font-size: 0.72rem;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--text-dark);
+    text-decoration: none;
+    border-bottom: 1px solid var(--stone-dark);
+    padding-bottom: 2px;
+    transition: color 0.3s, border-color 0.3s;
+  }
+
+  .btn-outline:hover { color: var(--sage-dark); border-color: var(--sage-dark); }
+
+  .hero-divider {
+    width: 60px;
+    height: 1px;
+    background: var(--stone-mid);
+    margin: 4rem auto 0;
+  }
+
+  .hero-scroll {
+    font-family: var(--sans);
+    font-size: 0.65rem;
+    letter-spacing: 0.25em;
+    text-transform: uppercase;
+    color: var(--text-light);
+    margin-top: 1rem;
+  }
+
+  /* ── SECTION COMMONS ── */
+  section { padding: 7rem 4rem; }
+
+  .section-label {
+    font-family: var(--sans);
+    font-size: 0.65rem;
+    letter-spacing: 0.35em;
+    text-transform: uppercase;
+    color: var(--sage);
+    margin-bottom: 1.2rem;
+  }
+
+  .section-title {
+    font-family: var(--serif);
+    font-size: clamp(2.4rem, 5vw, 4rem);
+    font-weight: 300;
+    line-height: 1.1;
+    color: var(--text-dark);
+  }
+
+  .section-title em { font-style: italic; color: var(--sage-dark); }
+
+  /* ── SERVICES ── */
+  #services {
+    background: var(--warm-white);
+  }
+
+  .services-header {
+    max-width: 580px;
+    margin: 0 auto 5rem;
+    text-align: center;
+  }
+
+  .services-header p {
+    font-family: var(--serif);
+    font-size: 1.1rem;
+    font-style: italic;
+    color: var(--text-mid);
+    line-height: 1.75;
+    margin-top: 1.5rem;
+  }
+
+  .services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 1.5px;
+    background: var(--stone-mid);
+    border: 1.5px solid var(--stone-mid);
+    border-radius: 4px;
+    overflow: hidden;
+    max-width: 1100px;
+    margin: 0 auto;
+  }
+
+  .service-card {
+    background: var(--warm-white);
+    padding: 3rem 2.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    transition: background 0.4s;
+  }
+
+  .service-card:hover { background: var(--cream); }
+
+  .service-number {
+    font-family: var(--serif);
+    font-size: 0.85rem;
+    color: var(--sage);
+    letter-spacing: 0.1em;
+  }
+
+  .service-title {
+    font-family: var(--serif);
+    font-size: 1.5rem;
+    font-weight: 400;
+    color: var(--text-dark);
+    line-height: 1.2;
+  }
+
+  .service-desc {
+    font-family: var(--sans);
+    font-size: 0.85rem;
+    color: var(--text-mid);
+    line-height: 1.75;
+    font-weight: 300;
+  }
+
+  .service-detail {
+    font-family: var(--sans);
+    font-size: 0.7rem;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--sage);
+    margin-top: auto;
+    padding-top: 1rem;
+    border-top: 1px solid var(--stone);
+  }
+
+  /* ── ABOUT ── */
+  #about {
+    background: var(--cream);
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 6rem;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  .about-image-block {
+    position: relative;
+  }
+
+  .about-image-placeholder {
+    width: 100%;
+    aspect-ratio: 3/4;
+    background: var(--stone);
+    border-radius: 4px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+  }
+
+  .about-image-placeholder span {
+    font-family: var(--serif);
+    font-size: 0.9rem;
+    font-style: italic;
+    color: var(--text-light);
+  }
+
+  .about-image-badge {
+    position: absolute;
+    bottom: -1.5rem;
+    right: -1.5rem;
+    width: 110px;
+    height: 110px;
+    background: var(--sage);
+    border-radius: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 0;
+  }
+
+  .about-image-badge .num {
+    font-family: var(--serif);
+    font-size: 2rem;
+    font-weight: 300;
+    color: var(--cream);
+    line-height: 1;
+  }
+
+  .about-image-badge .label {
+    font-family: var(--sans);
+    font-size: 0.55rem;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--sage-light);
+    line-height: 1.4;
+    text-align: center;
+    padding: 0 10px;
+  }
+
+  .about-text { display: flex; flex-direction: column; gap: 1.5rem; }
+
+  .about-text .lead {
+    font-family: var(--serif);
+    font-size: 1.25rem;
+    font-style: italic;
+    color: var(--text-mid);
+    line-height: 1.7;
+  }
+
+  .about-text p {
+    font-family: var(--sans);
+    font-size: 0.88rem;
+    color: var(--text-mid);
+    line-height: 1.85;
+    font-weight: 300;
+  }
+
+  .about-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.6rem;
+    margin-top: 0.5rem;
+  }
+
+  .about-tag {
+    font-family: var(--sans);
+    font-size: 0.65rem;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--sage-dark);
+    background: var(--sage-light);
+    padding: 0.4rem 0.9rem;
+    border-radius: 2px;
+  }
+
+  .about-philosophy {
+    font-family: var(--serif);
+    font-size: 1.05rem;
+    font-style: italic;
+    color: var(--sage-dark);
+    border-left: 2px solid var(--sage);
+    padding-left: 1.2rem;
+    line-height: 1.6;
+  }
+
+  /* ── PORTFOLIO ── */
+  #portfolio {
+    background: var(--warm-white);
+    padding: 7rem 4rem;
+  }
+
+  .portfolio-header {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    margin-bottom: 4rem;
+    max-width: 1100px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .portfolio-header p {
+    font-family: var(--serif);
+    font-size: 1rem;
+    font-style: italic;
+    color: var(--text-mid);
+    max-width: 320px;
+    line-height: 1.7;
+  }
+
+  .portfolio-grid {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: auto;
+    gap: 1.5rem;
+    max-width: 1100px;
+    margin: 0 auto;
+  }
+
+  .proj {
+    background: var(--stone);
+    border-radius: 4px;
+    overflow: hidden;
+    position: relative;
+    cursor: pointer;
+  }
+
+  .proj-inner {
+    aspect-ratio: 4/3;
+    background: var(--stone);
+    display: flex;
+    align-items: flex-end;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .proj:nth-child(1) { grid-column: span 7; }
+  .proj:nth-child(2) { grid-column: span 5; }
+  .proj:nth-child(3) { grid-column: span 4; }
+  .proj:nth-child(4) { grid-column: span 4; }
+  .proj:nth-child(5) { grid-column: span 4; }
+  .proj:nth-child(6) { grid-column: span 6; }
+  .proj:nth-child(7) { grid-column: span 6; }
+
+  .proj-color-1 { background: #D8D2C6; }
+  .proj-color-2 { background: #C9C3B9; }
+  .proj-color-3 { background: #BEB8AE; }
+  .proj-color-4 { background: #D4CCB8; }
+  .proj-color-5 { background: #C4BFB2; }
+  .proj-color-6 { background: #CFC9BC; }
+  .proj-color-7 { background: #BDB8AC; }
+
+  .proj-info {
+    position: absolute;
+    bottom: 0; left: 0; right: 0;
+    padding: 1.5rem;
+    background: linear-gradient(transparent, rgba(44,40,36,0.7));
+    transform: translateY(4px);
+    transition: transform 0.3s;
+  }
+
+  .proj:hover .proj-info { transform: translateY(0); }
+
+  .proj-location {
+    font-family: var(--sans);
+    font-size: 0.6rem;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: rgba(250,248,244,0.7);
+    margin-bottom: 0.3rem;
+  }
+
+  .proj-name {
+    font-family: var(--serif);
+    font-size: 1.15rem;
+    font-weight: 400;
+    color: var(--cream);
+  }
+
+  .proj-scope {
+    font-family: var(--sans);
+    font-size: 0.65rem;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--sage-light);
+    margin-top: 0.3rem;
+  }
+
+  .proj-placeholder-text {
+    font-family: var(--serif);
+    font-size: 0.85rem;
+    font-style: italic;
+    color: var(--text-light);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    white-space: nowrap;
+  }
+
+  /* ── PROCESS STRIP ── */
+  #process-strip {
+    background: var(--sage);
+    padding: 3.5rem 4rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0;
+  }
+
+  .process-items {
+    display: flex;
+    align-items: center;
+    gap: 0;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .process-item {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 0 2.5rem;
+  }
+
+  .process-item:not(:last-child) {
+    border-right: 1px solid rgba(250,248,244,0.3);
+  }
+
+  .process-num {
+    font-family: var(--serif);
+    font-size: 1.8rem;
+    font-weight: 300;
+    color: rgba(250,248,244,0.4);
+    line-height: 1;
+  }
+
+  .process-step { display: flex; flex-direction: column; gap: 0.15rem; }
+
+  .process-step-title {
+    font-family: var(--serif);
+    font-size: 1.05rem;
+    font-weight: 400;
+    color: var(--cream);
+  }
+
+  .process-step-sub {
+    font-family: var(--sans);
+    font-size: 0.65rem;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: rgba(250,248,244,0.6);
+  }
+
+  /* ── COMMUNITIES ── */
+  #communities {
+    background: var(--cream);
+    text-align: center;
+    padding: 6rem 4rem;
+  }
+
+  .communities-title {
+    font-family: var(--serif);
+    font-size: clamp(1.8rem, 3.5vw, 2.8rem);
+    font-weight: 300;
+    color: var(--text-dark);
+    margin-bottom: 0.8rem;
+  }
+
+  .communities-sub {
+    font-family: var(--sans);
+    font-size: 0.8rem;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--text-light);
+    margin-bottom: 3rem;
+  }
+
+  .community-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.8rem;
+    justify-content: center;
+    max-width: 700px;
+    margin: 0 auto;
+  }
+
+  .community-tag {
+    font-family: var(--sans);
+    font-size: 0.72rem;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--text-mid);
+    border: 1px solid var(--stone-mid);
+    padding: 0.55rem 1.2rem;
+    border-radius: 2px;
+    background: var(--warm-white);
+  }
+
+  /* ── CONTACT ── */
+  #contact {
+    background: var(--text-dark);
+    padding: 8rem 4rem;
+    text-align: center;
+  }
+
+  #contact .section-label { color: var(--sage-light); }
+
+  #contact .section-title {
+    color: var(--cream);
+    margin-bottom: 1.5rem;
+  }
+
+  #contact p {
+    font-family: var(--serif);
+    font-size: 1.1rem;
+    font-style: italic;
+    color: var(--stone-mid);
+    max-width: 480px;
+    margin: 0 auto 3.5rem;
+    line-height: 1.75;
+  }
+
+  .contact-actions {
+    display: flex;
+    gap: 1.5rem;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-bottom: 4rem;
+  }
+
+  .btn-sage {
+    font-family: var(--sans);
+    font-size: 0.72rem;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--cream);
+    background: var(--sage);
+    text-decoration: none;
+    padding: 0.9rem 2.2rem;
+    border-radius: 2px;
+    transition: background 0.3s;
+  }
+
+  .btn-sage:hover { background: var(--sage-dark); }
+
+  .btn-ghost {
+    font-family: var(--sans);
+    font-size: 0.72rem;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--stone-mid);
+    text-decoration: none;
+    border-bottom: 1px solid var(--text-mid);
+    padding-bottom: 2px;
+    transition: color 0.3s, border-color 0.3s;
+  }
+
+  .btn-ghost:hover { color: var(--sage-light); border-color: var(--sage-light); }
+
+  .contact-details {
+    display: flex;
+    gap: 3rem;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  .contact-item {
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+    align-items: center;
+  }
+
+  .contact-item-label {
+    font-family: var(--sans);
+    font-size: 0.6rem;
+    letter-spacing: 0.25em;
+    text-transform: uppercase;
+    color: var(--text-light);
+  }
+
+  .contact-item-value {
+    font-family: var(--serif);
+    font-size: 1rem;
+    color: var(--stone);
+  }
+
+  /* ── FOOTER ── */
+  footer {
+    background: #1E1C1A;
+    padding: 2rem 4rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
+
+  .footer-logo {
+    font-family: var(--serif);
+    font-size: 0.9rem;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--stone-mid);
+  }
+
+  .footer-copy {
+    font-family: var(--sans);
+    font-size: 0.65rem;
+    letter-spacing: 0.1em;
+    color: var(--text-light);
+  }
+
+  .footer-ig {
+    font-family: var(--sans);
+    font-size: 0.65rem;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--sage);
+    text-decoration: none;
+    transition: color 0.3s;
+  }
+
+  .footer-ig:hover { color: var(--sage-light); }
+
+  /* ── RESPONSIVE ── */
+  @media (max-width: 900px) {
+    nav { padding: 0 1.5rem; }
+    .nav-links { display: none; }
+    section { padding: 5rem 2rem; }
+
+    #about {
+      grid-template-columns: 1fr;
+      gap: 3rem;
+      padding: 5rem 2rem;
+    }
+
+    .about-image-placeholder { aspect-ratio: 4/3; }
+
+    .portfolio-grid {
+      grid-template-columns: 1fr 1fr;
+    }
+
+    .proj:nth-child(n) { grid-column: span 1; }
+    .proj:nth-child(1) { grid-column: span 2; }
+
+    .portfolio-header { flex-direction: column; gap: 1rem; margin-bottom: 2.5rem; }
+
+    #process-strip { padding: 2.5rem 2rem; }
+    .process-item { padding: 1rem 1.5rem; }
+    .process-item:not(:last-child) { border-right: none; border-bottom: 1px solid rgba(250,248,244,0.3); }
+    .process-items { flex-direction: column; align-items: flex-start; }
+
+    footer { flex-direction: column; align-items: center; text-align: center; }
+  }
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <a href="#home" class="nav-logo">Little Villa Projects</a>
+  <ul class="nav-links">
+    <li><a href="#services">Services</a></li>
+    <li><a href="#portfolio">Portfolio</a></li>
+    <li><a href="#about">About</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+  <a href="#contact" class="nav-cta">Get in touch</a>
+</nav>
+
+<!-- HERO -->
+<section id="home">
+  <p class="hero-eyebrow">Interior Design · Dubai</p>
+  <h1 class="hero-title">Curated Spaces,<br /><em>Considered Design</em></h1>
+  <p class="hero-sub">E-Design &nbsp;·&nbsp; Space Planning &nbsp;·&nbsp; Garden Design</p>
+  <p class="hero-tagline">"Beauty through function — spaces designed for the way you actually live."</p>
+  <div class="hero-actions">
+    <a href="#portfolio" class="btn-primary">View Portfolio</a>
+    <a href="#services" class="btn-outline">Our Services</a>
+  </div>
+  <div class="hero-divider"></div>
+  <p class="hero-scroll">Scroll to explore</p>
+</section>
+
+<!-- SERVICES -->
+<section id="services">
+  <div class="services-header">
+    <p class="section-label">What we offer</p>
+    <h2 class="section-title">Great design,<br /><em>one room at a time</em></h2>
+    <p>Making thoughtful interior design genuinely accessible — tailored to your home, your family, and the way you live in it.</p>
+  </div>
+
+  <div class="services-grid">
+    <div class="service-card">
+      <span class="service-number">01</span>
+      <h3 class="service-title">E-Design</h3>
+      <p class="service-desc">A full design service delivered entirely online. You receive a complete design package — floorplan, mood board, material selections, 3D visuals, and a shopping list — ready to hand to your contractor or implement yourself.</p>
+      <span class="service-detail">Full design package · Remote delivery</span>
+    </div>
+    <div class="service-card">
+      <span class="service-number">02</span>
+      <h3 class="service-title">Space Planning</h3>
+      <p class="service-desc">Rethinking how a room works before anything is purchased or built. From reconfigurations and extensions to flow improvements and storage solutions, this is where the real transformation begins.</p>
+      <span class="service-detail">Layout · Flow · Storage strategy</span>
+    </div>
+    <div class="service-card">
+      <span class="service-number">03</span>
+      <h3 class="service-title">Garden Design</h3>
+      <p class="service-desc">Outdoor spaces designed for Dubai living — pools, barbecue areas, play zones, and planting plans. Spaces that flow from indoors out, built to be genuinely used and loved year-round.</p>
+      <span class="service-detail">Pool · BBQ · Planting · Lighting</span>
+    </div>
+    <div class="service-card">
+      <span class="service-number">04</span>
+      <h3 class="service-title">Carpenter Drawings</h3>
+      <p class="service-desc">Detailed technical documentation — elevations, joinery drawings, and reflected ceiling plans — so your contractor builds exactly what was designed. Prepared to UAE standards.</p>
+      <span class="service-detail">RCPs · Elevations · Joinery</span>
+    </div>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section id="about">
+  <div class="about-image-block">
+    <div class="about-image-placeholder">
+      <span>Your photo here</span>
+    </div>
+    <div class="about-image-badge">
+      <span class="num">7+</span>
+      <span class="label">Years in Dubai</span>
+    </div>
+  </div>
+
+  <div class="about-text">
+    <p class="section-label">About Ashlee</p>
+    <h2 class="section-title">Designed for<br /><em>real life</em></h2>
+
+    <p class="lead">I design homes that truly work for the people living in them.</p>
+
+    <p>Before becoming a designer, I spent nine years as a primary school teacher — a career that shaped how I anticipate needs and translate them into practical, thoughtful solutions. I'm also a wife, a mother, and a proud owner of two rescue cats, so I understand firsthand how a home needs to function beyond just looking good.</p>
+
+    <p>Originally from Canada, I've been based in Dubai for over seven years. After completing my Design Diploma at The Designer's Studio here in Dubai, I've personally renovated multiple properties across the UAE — particularly within the Springs community — and understand these homes intimately.</p>
+
+    <p class="about-philosophy">"I'm not interested in making a space look good on paper — I want it to work effortlessly for the people inside it."</p>
+
+    <p>Organisation isn't an afterthought in my process — it's the foundation. Because when a space is truly organised, it almost takes care of itself.</p>
+
+    <div class="about-tags">
+      <span class="about-tag">E-Design</span>
+      <span class="about-tag">Space Planning</span>
+      <span class="about-tag">Garden Design</span>
+      <span class="about-tag">Emaar Communities</span>
+      <span class="about-tag">Emirates Living</span>
+    </div>
+  </div>
+</section>
+
+<!-- PROCESS STRIP -->
+<div id="process-strip">
+  <div class="process-items">
+    <div class="process-item">
+      <span class="process-num">01</span>
+      <div class="process-step">
+        <span class="process-step-title">Discovery Call</span>
+        <span class="process-step-sub">Understand your brief</span>
+      </div>
+    </div>
+    <div class="process-item">
+      <span class="process-num">02</span>
+      <div class="process-step">
+        <span class="process-step-title">Concept & Mood</span>
+        <span class="process-step-sub">Direction &amp; palette</span>
+      </div>
+    </div>
+    <div class="process-item">
+      <span class="process-num">03</span>
+      <div class="process-step">
+        <span class="process-step-title">Design Development</span>
+        <span class="process-step-sub">Plans, elevations, 3D</span>
+      </div>
+    </div>
+    <div class="process-item">
+      <span class="process-num">04</span>
+      <div class="process-step">
+        <span class="process-step-title">Final Package</span>
+        <span class="process-step-sub">Ready to build</span>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- PORTFOLIO -->
+<section id="portfolio">
+  <div class="portfolio-header">
+    <div>
+      <p class="section-label">Selected Projects</p>
+      <h2 class="section-title">Our <em>Work</em></h2>
+    </div>
+    <p>Family homes across Dubai's Emaar and Emirates Living communities, designed one room at a time.</p>
+  </div>
+
+  <div class="portfolio-grid">
+    <div class="proj">
+      <div class="proj-inner proj-color-1">
+        <span class="proj-placeholder-text">Project image</span>
+        <div class="proj-info">
+          <p class="proj-location">Springs 2E</p>
+          <p class="proj-name">Master Bedroom &amp; Office</p>
+          <p class="proj-scope">Space Planning · E-Design · Balcony Extension</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="proj">
+      <div class="proj-inner proj-color-2">
+        <span class="proj-placeholder-text">Project image</span>
+        <div class="proj-info">
+          <p class="proj-location">Springs 2E</p>
+          <p class="proj-name">Garden Design</p>
+          <p class="proj-scope">Pool · BBQ · Play Area · Lighting</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="proj">
+      <div class="proj-inner proj-color-3">
+        <span class="proj-placeholder-text">Project image</span>
+        <div class="proj-info">
+          <p class="proj-location">Ontario Tower</p>
+          <p class="proj-name">Master Bathroom</p>
+          <p class="proj-scope">Full E-Design</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="proj">
+      <div class="proj-inner proj-color-4">
+        <span class="proj-placeholder-text">Project image</span>
+        <div class="proj-info">
+          <p class="proj-location">Mira Oasis</p>
+          <p class="proj-name">Living Room</p>
+          <p class="proj-scope">Space Planning · Custom TV Wall</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="proj">
+      <div class="proj-inner proj-color-5">
+        <span class="proj-placeholder-text">Project image</span>
+        <div class="proj-info">
+          <p class="proj-location">Ontario Tower</p>
+          <p class="proj-name">Powder Room</p>
+          <p class="proj-scope">Full E-Design</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="proj">
+      <div class="proj-inner proj-color-6">
+        <span class="proj-placeholder-text">Project image</span>
+        <div class="proj-info">
+          <p class="proj-location">Residential 3</p>
+          <p class="proj-name">Kitchen Design</p>
+          <p class="proj-scope">Traditional · Full E-Design</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="proj">
+      <div class="proj-inner proj-color-7">
+        <span class="proj-placeholder-text">Project image</span>
+        <div class="proj-info">
+          <p class="proj-location">Ontario Tower</p>
+          <p class="proj-name">Kitchen &amp; Living Room</p>
+          <p class="proj-scope">Full E-Design</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- COMMUNITIES -->
+<div id="communities">
+  <p class="communities-title">Specialist in <em style="font-family: var(--serif); font-style: italic; color: var(--sage-dark);">Emaar &amp; Emirates Living</em> communities</p>
+  <p class="communities-sub">We know these homes inside and out</p>
+  <div class="community-tags">
+    <span class="community-tag">The Springs</span>
+    <span class="community-tag">The Meadows</span>
+    <span class="community-tag">The Lakes</span>
+    <span class="community-tag">The Greens</span>
+    <span class="community-tag">Arabian Ranches</span>
+    <span class="community-tag">Mira</span>
+    <span class="community-tag">Reem</span>
+    <span class="community-tag">Dubai Hills</span>
+    <span class="community-tag">Mudon</span>
+  </div>
+</div>
+
+<!-- CONTACT -->
+<section id="contact">
+  <p class="section-label">Let's work together</p>
+  <h2 class="section-title" style="color: var(--cream);">Start with a<br /><em>conversation</em></h2>
+  <p>Every project begins with a discovery call — a chance to talk through your space, your brief, and what you're hoping to achieve.</p>
+
+  <div class="contact-actions">
+    <a href="mailto:hello@littlevillaprojects.com" class="btn-sage">Send an enquiry</a>
+    <a href="https://www.instagram.com/littlevillaprojects" target="_blank" class="btn-ghost">@littlevillaprojects</a>
+  </div>
+
+  <div class="contact-details">
+    <div class="contact-item">
+      <span class="contact-item-label">Based in</span>
+      <span class="contact-item-value">Dubai, UAE</span>
+    </div>
+    <div class="contact-item">
+      <span class="contact-item-label">Serving</span>
+      <span class="contact-item-value">Dubai &amp; surrounds</span>
+    </div>
+    <div class="contact-item">
+      <span class="contact-item-label">Instagram</span>
+      <span class="contact-item-value">@littlevillaprojects</span>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <span class="footer-logo">Little Villa Projects</span>
+  <span class="footer-copy">© 2025 Little Villa Projects · Dubai, UAE</span>
+  <a href="https://www.instagram.com/littlevillaprojects" target="_blank" class="footer-ig">Instagram ↗</a>
+</footer>
+
+</body>
+</html>
